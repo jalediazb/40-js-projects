@@ -1,24 +1,3 @@
-# js
+## 40 Javascrits Projects
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[https://www.freecodecamp.org/news/javascript-projects-for-beginners/](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
