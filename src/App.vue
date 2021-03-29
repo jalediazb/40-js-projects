@@ -5,9 +5,9 @@
         <div class="section">
           <div class="container">
             <ul id="nav">
-              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/">Inicio</router-link></li>
               <li>
-                <router-link to="/color-selector">Color Selector</router-link>
+                <router-link to="/color-selector">Selector de Color</router-link>
               </li>
             </ul>
           </div>
