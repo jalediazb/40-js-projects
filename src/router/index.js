@@ -24,6 +24,12 @@ const routes = [
     name: 'Counter',
     component: () =>
       import('../views/Counter.vue')
+  },
+  {
+    path: '/review-carousel',
+    name: 'ReviewCarousel',
+    component: () =>
+      import('../views/ReviewCarousel.vue')
   }
 ]
 

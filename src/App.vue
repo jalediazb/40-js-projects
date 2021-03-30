@@ -12,6 +12,9 @@
               <li>
                 <router-link to="/counter">Counter</router-link>
               </li>
+              <li>
+                <router-link to="/review-carousel">Review Carousel</router-link>
+              </li>
             </ul>
           </div>
         </div>
