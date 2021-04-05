@@ -3,9 +3,9 @@
     <div class="section has-background-white">
       <div id="pagina" class="container">
         <div
-          class="navegacion is-flex is-flex-wrap-wrap is-align-content-center is-justify-content-space-between has-background-warning p-3"
+          class="navegacion is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-space-between has-background-warning p-3"
         >
-          <div class="logotipo">
+          <div class="logotipo is-flex is-align-content-center">
             <span>LogoTipo</span>
           </div>
           <div class="navegacion-button">
@@ -116,7 +116,14 @@ export default {
   methods: {
     toggleMenu() {
       let menu = document.querySelector(".menu-enlaces");
-      menu.classList.toggle("is-hidden");
+      // Verifica que existen elementos
+      if (menu.querySelectorAll("li").length > 0) {
+        menu.classList.toggle("is-hidden");
+        const buttonMenu = document.querySelector(".navegacion-button button");
+        buttonMenu.textContent === "Menu"
+          ? (buttonMenu.textContent = "X")
+          : (buttonMenu.textContent = "Menu");
+      }
     },
   },
 };
