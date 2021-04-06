@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <div id="app" class="has-background-light">
     <div class="columns is-marginless">
-      <div class="column is-one-fifth has-background-light">
+      <div class="column is-one-fifth">
         <div class="section">
           <div class="container">
+            <h1 class="title"><router-link to="/" class="has-text-dark">Javascript</router-link></h1>
+            <h2 class="subtitle"><router-link to="/" class="has-text-grey">Projects</router-link></h2>
             <ul id="nav">
-              <li><router-link to="/">Inicio</router-link></li>
+
               <li>
                 <router-link to="/color-selector"
                   >Selector de Color</router-link
@@ -33,7 +35,8 @@
 </template>
 
 <style scoped>
-.columns {
+#app {
   min-height: 100vh;
 }
+
 </style>
