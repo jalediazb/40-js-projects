@@ -24,6 +24,9 @@
                   >Responsive Navbar</router-link
                 >
               </li>
+              <li>
+                <router-link to="/trends">Google Trends</router-link>
+              </li>
             </ul>
           </div>
         </div>
