@@ -1,3 +1,5 @@
-## 40 Javascrits Projects
+## Javascrits and Vue Projects
 
-[https://www.freecodecamp.org/news/javascript-projects-for-beginners/](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
+
+Ideas: 
+- [https://www.freecodecamp.org/news/javascript-projects-for-beginners/](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
