@@ -7,13 +7,35 @@
             <div class="card content">
               <div class="card-content has-text-centered">
                 <figure class="retrato image is-96x96">
-                  <img class="is-rounded" :src="listaUsuarios.results[usuarioActivo].picture.large">
+                  <img
+                    class="is-rounded"
+                    :src="listaUsuarios.results[usuarioActivo].picture.large"
+                  />
                 </figure>
-                <h3 class="title is-5">{{ listaUsuarios.results[usuarioActivo].name.first }} {{ listaUsuarios.results[usuarioActivo].name.last }}</h3>
-                <h4 class="subtitle is-5 has-text-grey-lighter">{{ listaUsuarios.results[usuarioActivo].location.city }}</h4>
+                <h3 class="title is-5">
+                  {{ listaUsuarios.results[usuarioActivo].name.first }}
+                  {{ listaUsuarios.results[usuarioActivo].name.last }}
+                </h3>
+                <h4 class="subtitle is-5 has-text-grey-lighter">
+                  {{ listaUsuarios.results[usuarioActivo].location.city }}
+                </h4>
                 <p class="buttons is-centered">
-                  <button @click="anterior" class="button is-small" :disabled="usuarioActivo <= 0">Anterior</button>
-                  <button @click="siguiente" class="button is-small" :disabled="usuarioActivo >= listaUsuarios.results.length - 1">Siguiente</button>
+                  <button
+                    @click="anterior"
+                    class="button is-small"
+                    :disabled="usuarioActivo <= 0"
+                  >
+                    Anterior
+                  </button>
+                  <button
+                    @click="siguiente"
+                    class="button is-small"
+                    :disabled="
+                      usuarioActivo >= listaUsuarios.results.length - 1
+                    "
+                  >
+                    Siguiente
+                  </button>
                 </p>
               </div>
             </div>
@@ -26,32 +48,36 @@
 
 <script>
 export default {
-  name: 'ReviewCarousel',
-  mounted () {
-    fetch('https://randomuser.me/api/?results=5')
-      .then(response => response.json())
-      .then(data => { this.listaUsuarios = data })
+  name: "ReviewCarousel",
+  created() {
+    fetch("https://randomuser.me/api/?results=5")
+      .then((response) => response.json())
+      .then((data) => {
+        this.listaUsuarios = data;
+      });
+    this.usuarioActivo = 0;
   },
   data: function () {
     return {
-      listaUsuarios: '',
-      usuarioActivo: 0
-    }
+      listaUsuarios: null,
+      usuarioActivo: null,
+      title: "Javascript & Vue",
+      subtitle: "Projects",
+    };
   },
   methods: {
-    anterior () {
-      this.usuarioActivo--
+    anterior() {
+      this.usuarioActivo--;
     },
-    siguiente () {
-      this.usuarioActivo++
-    }
-  }
-}
+    siguiente() {
+      this.usuarioActivo++;
+    },
+  },
+};
 </script>
 
 <style lang="css" scoped>
 figure.retrato {
   margin: 0 auto 15px auto;
 }
-
 </style>

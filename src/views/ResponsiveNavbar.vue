@@ -112,21 +112,27 @@
 
 <script>
 export default {
-  name: 'ResponsiveNavbar',
+  name: "ResponsiveNavbar",
+  data() {
+    return {
+      title: "Javascript & Vue",
+      subtitle: "Projects",
+    };
+  },
   methods: {
-    toggleMenu () {
-      const menu = document.querySelector('.menu-enlaces')
+    toggleMenu() {
+      const menu = document.querySelector(".menu-enlaces");
       // Verifica que existen elementos
-      if (menu.querySelectorAll('li').length > 0) {
-        menu.classList.toggle('is-hidden')
-        const buttonMenu = document.querySelector('.navegacion-button button')
-        buttonMenu.textContent === 'Menu'
-          ? (buttonMenu.textContent = 'X')
-          : (buttonMenu.textContent = 'Menu')
+      if (menu.querySelectorAll("li").length > 0) {
+        menu.classList.toggle("is-hidden");
+        const buttonMenu = document.querySelector(".navegacion-button button");
+        buttonMenu.textContent === "Menu"
+          ? (buttonMenu.textContent = "X")
+          : (buttonMenu.textContent = "Menu");
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

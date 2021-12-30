@@ -7,18 +7,18 @@
             <div class="card">
               <div class="card-content has-text-centered content">
                 <h1>Counter</h1>
-                    <p id="contador" :class="[colorContador]">{{ contador }}</p>
-                    <div class="buttons is-centered">
-                      <button @click="reducir" class="button is-danger">
-                        Reducir
-                      </button>
-                      <button @click="resetear" class="button is-dark">
-                        Resetear
-                      </button>
-                      <button @click="aumentar" class="button is-success">
-                        Aumentar
-                      </button>
-                    </div>
+                <p id="contador" :class="[colorContador]">{{ contador }}</p>
+                <div class="buttons is-centered">
+                  <button @click="reducir" class="button is-danger">
+                    Reducir
+                  </button>
+                  <button @click="resetear" class="button is-dark">
+                    Resetear
+                  </button>
+                  <button @click="aumentar" class="button is-success">
+                    Aumentar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -30,36 +30,38 @@
 
 <script>
 export default {
-  name: 'Counter',
+  name: "Counter",
   data: function () {
     return {
-      contador: 0
-    }
+      contador: 0,
+      title: "Javascript & Vue",
+      subtitle: "Projects",
+    };
   },
   computed: {
-    colorContador () {
-      let color = 'has-text-dark'
+    colorContador() {
+      let color = "has-text-dark";
       if (this.contador < 0) {
-        color = 'has-text-danger'
+        color = "has-text-danger";
       }
       if (this.contador > 0) {
-        color = 'has-text-success'
+        color = "has-text-success";
       }
-      return color
-    }
+      return color;
+    },
   },
   methods: {
-    aumentar () {
-      this.contador++
+    aumentar() {
+      this.contador++;
     },
-    reducir () {
-      this.contador--
+    reducir() {
+      this.contador--;
     },
-    resetear () {
-      this.contador = 0
-    }
-  }
-}
+    resetear() {
+      this.contador = 0;
+    },
+  },
+};
 </script>
 
 <style lang="css" scoped>

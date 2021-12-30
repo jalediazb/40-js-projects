@@ -51,71 +51,73 @@
 
 <script>
 export default {
-  name: 'ColorSelector',
+  name: "ColorSelector",
   components: {},
-  mounted () {
-    this.crearColorAleatorio()
+  mounted() {
+    this.crearColorAleatorio();
   },
   data: function () {
     return {
-      caracteres: 'ABCDEF1234567890',
-      backgroundColor: '',
-      colorManual: '',
-      validez: false
-    }
+      caracteres: "ABCDEF1234567890",
+      backgroundColor: "",
+      colorManual: "",
+      validez: false,
+      title: "Javascript & Vue",
+      subtitle: "Projects",
+    };
   },
   methods: {
-    colorAletorio () {
-      this.crearColorAleatorio()
+    colorAletorio() {
+      this.crearColorAleatorio();
     },
-    crearColorAleatorio () {
-      this.colorManual = ''
-      this.validez = ''
-      let colorAleatorio = ''
+    crearColorAleatorio() {
+      this.colorManual = "";
+      this.validez = "";
+      let colorAleatorio = "";
       for (let i = 0; i < 6; i++) {
         var numeroAleatorio = Math.floor(
           Math.random() * (this.caracteres.length - 0) + 0
-        )
-        colorAleatorio = colorAleatorio + this.caracteres[numeroAleatorio]
+        );
+        colorAleatorio = colorAleatorio + this.caracteres[numeroAleatorio];
       }
-      colorAleatorio = '#' + colorAleatorio
-      this.backgroundColor = colorAleatorio
+      colorAleatorio = "#" + colorAleatorio;
+      this.backgroundColor = colorAleatorio;
     },
-    cambiarColorManualmente () {
+    cambiarColorManualmente() {
       if (this.validez === true) {
-        this.colorManual[0] === '#'
+        this.colorManual[0] === "#"
           ? (this.backgroundColor = this.colorManual)
-          : (this.backgroundColor = '#' + this.colorManual)
+          : (this.backgroundColor = "#" + this.colorManual);
       }
     },
-    verificarFormatoColor (colorParaVerificar) {
-      this.colorValido(false)
+    verificarFormatoColor(colorParaVerificar) {
+      this.colorValido(false);
 
-      if (colorParaVerificar[0] === '#') {
-        colorParaVerificar = colorParaVerificar.substring(1)
+      if (colorParaVerificar[0] === "#") {
+        colorParaVerificar = colorParaVerificar.substring(1);
       }
 
       if (colorParaVerificar.length === 3 || colorParaVerificar.length === 6) {
       } else {
-        this.colorValido(false)
-        return false
+        this.colorValido(false);
+        return false;
       }
 
       for (var caracter of colorParaVerificar) {
         if (this.caracteres.indexOf(caracter.toUpperCase()) === -1) {
-          this.colorValido(false)
-          return false
+          this.colorValido(false);
+          return false;
         }
       }
 
-      this.colorValido(true)
-      return colorParaVerificar
+      this.colorValido(true);
+      return colorParaVerificar;
     },
-    colorValido (estado) {
-      this.validez = estado
-    }
-  }
-}
+    colorValido(estado) {
+      this.validez = estado;
+    },
+  },
+};
 </script>
 
 <style>
