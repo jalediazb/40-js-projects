@@ -38,7 +38,7 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "quotes": ["error", "single", { "avoidEscape": true }]
+      "space-before-function-paren": ["error", "never"]
     }
   },
   "browserslist": ["> 1%", "last 2 versions", "not dead"]

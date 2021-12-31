@@ -48,32 +48,32 @@
 
 <script>
 export default {
-  name: "ReviewCarousel",
+  name: 'ReviewCarousel',
   created() {
-    fetch("https://randomuser.me/api/?results=5")
+    fetch('https://randomuser.me/api/?results=5')
       .then((response) => response.json())
       .then((data) => {
-        this.listaUsuarios = data;
-      });
-    this.usuarioActivo = 0;
+        this.listaUsuarios = data
+      })
+    this.usuarioActivo = 0
   },
   data: function () {
     return {
       listaUsuarios: null,
       usuarioActivo: null,
-      title: "Javascript & Vue",
-      subtitle: "Projects",
-    };
+      title: 'Javascript & Vue',
+      subtitle: 'Projects',
+    }
   },
   methods: {
     anterior() {
-      this.usuarioActivo--;
+      this.usuarioActivo--
     },
     siguiente() {
-      this.usuarioActivo++;
+      this.usuarioActivo++
     },
   },
-};
+}
 </script>
 
 <style lang="css" scoped>
