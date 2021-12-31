@@ -30,38 +30,38 @@
 
 <script>
 export default {
-  name: "Counter",
+  name: 'Counter',
   data: function () {
     return {
       contador: 0,
-      title: "Javascript & Vue",
-      subtitle: "Projects",
-    };
+      title: 'Javascript & Vue',
+      subtitle: 'Projects'
+    }
   },
   computed: {
     colorContador() {
-      let color = "has-text-dark";
+      let color = 'has-text-dark'
       if (this.contador < 0) {
-        color = "has-text-danger";
+        color = 'has-text-danger'
       }
       if (this.contador > 0) {
-        color = "has-text-success";
+        color = 'has-text-success'
       }
-      return color;
-    },
+      return color
+    }
   },
   methods: {
     aumentar() {
-      this.contador++;
+      this.contador++
     },
     reducir() {
-      this.contador--;
+      this.contador--
     },
     resetear() {
-      this.contador = 0;
-    },
-  },
-};
+      this.contador = 0
+    }
+  }
+}
 </script>
 
 <style lang="css" scoped>

@@ -22,20 +22,20 @@
 </template>
 
 <script>
-import Hero from "@/components/Hero.vue";
+import Hero from '@/components/Hero.vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    Hero,
+    Hero
   },
   data() {
     return {
-      title: "Javascript & Vue",
-      subtitle: "Projects",
-    };
-  },
-};
+      title: 'Javascript & Vue',
+      subtitle: 'Projects'
+    }
+  }
+}
 </script>
 
 <style scoped>

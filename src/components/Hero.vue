@@ -9,12 +9,12 @@
 
 <script>
 export default {
-  name: "Hero",
-  props: ["title", "subtitle"],
+  name: 'Hero',
+  props: ['title', 'subtitle'],
   data() {
-    return {};
-  },
-};
+    return {}
+  }
+}
 </script>
 
 <style>

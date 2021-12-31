@@ -38,18 +38,18 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   data: function () {
     return {
-      navbarStatus: false,
-    };
+      navbarStatus: false
+    }
   },
   methods: {
     toggleNavbar() {
-      this.navbarStatus = !this.navbarStatus;
-    },
-  },
-};
+      this.navbarStatus = !this.navbarStatus
+    }
+  }
+}
 </script>
 
 <style>
