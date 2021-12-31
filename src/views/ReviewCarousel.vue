@@ -62,7 +62,7 @@ export default {
       listaUsuarios: null,
       usuarioActivo: null,
       title: 'Javascript & Vue',
-      subtitle: 'Projects',
+      subtitle: 'Projects'
     }
   },
   methods: {
@@ -71,8 +71,8 @@ export default {
     },
     siguiente() {
       this.usuarioActivo++
-    },
-  },
+    }
+  }
 }
 </script>
 

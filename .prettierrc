@@ -2,5 +2,5 @@
   "semi": false,
   "singleQuote": true,
   "bracketSpacing": true,
-  "spaceBeforeFunctionParen": true
+  "trailingComma" : "none"
 }
